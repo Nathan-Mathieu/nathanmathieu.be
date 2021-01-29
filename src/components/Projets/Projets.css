@@ -14,11 +14,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 272px;
 }
 .integration-block-title {
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    text-align: center;
+}
+.all-integrations {
+    min-height: 1840px;
 }
 @media screen and (max-width: 1500px) {
     .projets {
@@ -42,12 +47,16 @@
     .projets {
         background-image: url("../../assets/img/backgrounds/900/projets900.svg");
     }
+    .all-integrations {
+        min-height: 1740px;
+    }
 }
 
 @media screen and (max-width: 550px) {
     .integration-block img {
         width: 250px;
     }
+   
     .projets {
         background-image: url("../../assets/img/backgrounds/900/projets900.svg");
     }
