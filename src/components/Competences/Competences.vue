@@ -90,13 +90,13 @@ export default {
 
         window.addEventListener("scroll", () => {
             let scrolled = window.scrollY;
-            if (scrolled > 1500) {
+            if (scrolled > 400) {
                 this.isLanguagesDisplayed = true;
             }
-            if(scrolled > 1800){
+            if(scrolled > 500){
                 this.isEnCoursDisplayed = true;
             }
-            if(scrolled > 2100){
+            if(scrolled > 600){
                 this.isOutilsDisplayed = true;
             }
         });

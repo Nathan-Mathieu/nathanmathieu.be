@@ -63,7 +63,7 @@ export default {
     created() {
         window.addEventListener("scroll", () => {
             let scrolled = window.scrollY;
-            if (scrolled > 2800) {
+            if (scrolled > 1500) {
                 this.isProjectsDisplayed = true;
             }
         });

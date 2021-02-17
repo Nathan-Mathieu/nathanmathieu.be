@@ -2,7 +2,7 @@
     <div class="infos compo">
         <div class="container">
             <div class="infos-block">
-                <div v-show="isInfosDisplayed" class="animate__animated animate__fadeInLeft">
+                <div  class="animate__animated animate__fadeIn">
                     <div class="btns">
                         <button @click="switchTab('contact')" :class="{ active: contact }">Contact</button>
                         <button @click="switchTab('parcours')" :class="{ active: parcours }">Parcours Scolaire</button>
@@ -109,7 +109,7 @@ export default {
     created() {
         window.addEventListener("scroll", () => {
             let scrolled = window.scrollY;
-            if (scrolled > 800) {
+            if (scrolled > 700) {
                 this.isInfosDisplayed = true;
             }
         });

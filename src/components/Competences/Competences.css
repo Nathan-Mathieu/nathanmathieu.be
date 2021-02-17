@@ -1,78 +1,58 @@
-.competences {
-    background-image: url("../../assets/img/backgrounds/competences.svg");
-}
 .languages {
-    min-height: 275px;
+  min-height: 275px;
 }
 .language-block {
-    margin: 2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 2.5rem;
-    width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2.5rem;
+  width: 80%;
 }
 .icon {
-    width: 70px;
+  width: 70px;
 }
 
 .encours {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 172px;
 }
 .outils {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 86px;
 }
 .encours-line {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .outils img,
 .encours img {
-    width: 70px;
-    margin: 0.5rem;
+  width: 70px;
+  margin: 0.5rem;
 }
-@media screen and (max-width: 1500px) {
-    .competences {
-        background-image: url("../../assets/img/backgrounds/1500/competences1500.svg");
-    }
-}
-@media screen and (max-width: 1200px) {
-    .competences {
-        background-image: url("../../assets/img/backgrounds/1200/competences1200.svg");
-    }
-}
-@media screen and (max-width: 1020px) {
-    .competences {
-        background-image: url("../../assets/img/backgrounds/1020/competences1020.svg");
-    }
-}
+
 @media screen and (max-width: 900px) {
-    .language-block {
-        font-size: 2rem;
-        width: 60%;
-    }
-    .icon {
-        width: 50px;
-    }
-    .outils img,
-    .encours img {
-        width: 50px;
-    }
-    .circles-block {
-        display: flex;
-    }
-    .circles-block img {
-        width: 20px;
-    }
-    .competences {
-        background-image: url("../../assets/img/backgrounds/900/competences900.svg");
-    }
+  .language-block {
+    font-size: 2rem;
+    width: 60%;
+  }
+  .icon {
+    width: 50px;
+  }
+  .outils img,
+  .encours img {
+    width: 50px;
+  }
+  .circles-block {
+    display: flex;
+  }
+  .circles-block img {
+    width: 20px;
+  }
 }

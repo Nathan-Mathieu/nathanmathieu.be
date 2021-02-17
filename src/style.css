@@ -1,135 +1,163 @@
-@import url("./normalize.css");
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 @-ms-viewport {
-    width: device-width;
+  width: device-width;
 }
 :root {
-    --width: 600px;
+  --width: 600px;
+  --distanceBord: 100px;
 }
+#content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+aside {
+  position: fixed;
+  left: var(--distanceBord);
+}
+section {
+  margin-right: var(--distanceBord);
+}
+#responsive-content {
+  display: none;
+} 
 body {
-    color: white;
+  color: white;
+  background: url("./assets/img/backgrounds/background.png");
 }
 header {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-    background-image: url(./assets/img/backgrounds/presentation.svg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: right;
-    z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 0.5rem;
+  position: absolute;
+  width: 100%;
 }
+footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+.progress-container {
+  width: 100%;
+  height: 8px;
+  opacity: 0.9;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #030303;
+  opacity: 0.9;
+}
+
 h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .title {
-    font-size: 1.8rem;
-    font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 700;
 
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 .compo {
-    width: 100%;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: right;
-    padding: 100px 50px;
+  width: 100%;
+  padding: 50px;
 }
 .margin-v {
-    margin: 80px 0;
+  margin: 80px 0;
 }
 .hr {
-    margin: 30px auto;
+  margin: 30px auto;
 
-    width: 80%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.205);
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.205);
 }
 .container {
-    width: var(--width);
-    background-color: rgba(22, 22, 22, 0.171);
-    padding: 50px;
+  width: var(--width);
+  background-color: rgba(22, 22, 22, 0.171);
+  padding: 50px;
 }
 .btns {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 button {
-    outline: none;
-    padding: 0.5rem 1rem;
-    border: none;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: rgba(110, 110, 110, 0.116);
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgba(110, 110, 110, 0.116);
 }
 button:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .container-title {
-    font-size: 1.5rem;
-    text-align: center;
+  font-size: 1.5rem;
+  text-align: center;
 }
 a {
-    color: white;
+  color: white;
 }
-
+@media screen and (max-width: 1600px) {
+  :root {
+    --distanceBord: 50px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  :root {
+    --distanceBord: 0px;
+  }
+}
+@media screen and (max-width: 1330px) {
+  #content {
+    display: none;
+  }
+  #responsive-content {
+    display: block;
+  }
+  :root {
+    --width: 90%;
+  }
+  .container {
+    margin: auto;
+  }
+}
 @media screen and (max-width: 900px) {
-    :root {
-        --width: 90%;
-    }
-    .container {
-        padding: 0.5rem;
-    }
+  .container {
+    padding: 0.5rem;
+  }
 }
 @media screen and (max-width: 800px) {
-    .compo {
-        padding: 100px 10px;
-    }
+  .compo {
+    padding: 100px 10px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 550px) {
-    :root {
-        --width: 85%;
-    }
-    button {
-        padding: 0.5rem 1rem;
-        font-size: 0.7rem;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-}
-@media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 1020px) {
-}
-@media screen and (max-width: 900px) {
-}
-@media screen and (max-width: 800px) {
-    .title {
-        font-size: 1.5rem;
-    }
-    body {
-        background: url("./assets/img/backgrounds/backgroundMobile.png");
-    }
-    .presentation,
-    .infos,
-    .competences,
-    .projets {
-        background-image: none;
-    }
-    .container {
-        margin: auto;
-    }
+  :root {
+    --width: 98%;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
 }
